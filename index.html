@@ -3,92 +3,165 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Steve Koo | IT Leadership</title>
+<title>Steve Koo</title>
 
 <style>
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #222;
-    background: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: #0f1115;
+    color: #e6e6e6;
+    line-height: 1.7;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 980px;
     margin: auto;
-    padding: 40px 20px;
+    padding: 0 24px;
 }
 
 .hero {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 30px;
-    margin-bottom: 40px;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid #2a2d33;
 }
 
-h1 {
+.hero h1 {
+    font-size: 56px;
     margin: 0;
-    font-size: 40px;
     font-weight: 700;
+    letter-spacing: -1px;
 }
 
-.subtitle {
-    font-size: 18px;
-    color: #555;
-    margin-top: 10px;
+.hero p {
+    max-width: 760px;
+    font-size: 20px;
+    color: #b8bcc4;
+    margin-top: 18px;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    background: rgba(15,17,21,0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #2a2d33;
+    z-index: 10;
+}
+
+.nav-inner {
+    max-width: 980px;
+    margin: auto;
+    padding: 14px 24px;
+    display: flex;
+    gap: 24px;
+}
+
+.nav a {
+    color: #b8bcc4;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav a:hover {
+    color: #ffffff;
 }
 
 .section {
-    margin-bottom: 40px;
+    padding: 70px 0;
+    border-bottom: 1px solid #2a2d33;
 }
 
-h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    border-left: 4px solid #111;
-    padding-left: 10px;
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.section p {
+    color: #c6c9cf;
+    max-width: 860px;
 }
 
 ul {
     padding-left: 20px;
 }
 
+li {
+    margin-bottom: 10px;
+    color: #c6c9cf;
+}
+
+.highlight {
+    color: #ffffff;
+    font-weight: 600;
+}
+
 .footer {
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
-    margin-top: 40px;
-    color: #555;
+    padding: 40px 0;
+    text-align: center;
+    color: #7f8590;
     font-size: 14px;
+}
+
+.linkedin {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    border: 1px solid #3b4048;
+    border-radius: 6px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.linkedin:hover {
+    background: #1b1f26;
 }
 </style>
 </head>
 
 <body>
 
+<div class="nav">
+    <div class="nav-inner">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#initiatives">Initiatives</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+
 <div class="container">
 
-    <div class="hero">
+    <section class="hero">
         <h1>Steve Koo</h1>
-        <div class="subtitle">
-            Principal IT Technologist | Service Delivery • IT Operations • Audit Readiness
-        </div>
         <p>
-            I lead enterprise IT initiatives that strengthen operational stability, support global teams, and ensure audit-ready environments across complex healthcare and technology ecosystems.
+            I lead enterprise IT initiatives focused on operational stability, global service delivery, and audit-ready technology environments. My work centers on aligning teams, reducing risk, and delivering reliable execution across complex healthcare ecosystems.
         </p>
-    </div>
+        <a class="linkedin" href="https://www.linkedin.com/in/stevekoo/" target="_blank">
+            View LinkedIn Profile
+        </a>
+    </section>
 
-    <div class="section">
+    <section class="section" id="about">
         <h2>About</h2>
         <p>
-            I specialize in bridging enterprise IT strategy with operational execution. My work focuses on building reliable support models, coordinating cross-functional teams, and delivering stability during critical business and regulatory events.
+            I specialize in bridging enterprise IT strategy with real-world execution. My focus is building scalable support models, coordinating cross-functional teams, and maintaining operational stability during high-pressure business and regulatory events.
         </p>
         <p>
-            I am often engaged where clarity, coordination, and execution are required across infrastructure, service delivery, and compliance-driven initiatives.
+            I am often brought in where clarity, structure, and accountability are needed to move initiatives forward and deliver measurable outcomes.
         </p>
-    </div>
+    </section>
 
-    <div class="section">
+    <section class="section" id="expertise">
         <h2>Core Expertise</h2>
         <ul>
             <li>Enterprise IT Operations & Service Delivery</li>
@@ -97,34 +170,37 @@ ul {
             <li>Incident Response & Escalation Governance</li>
             <li>Cross-Functional Leadership & Vendor Coordination</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="section">
+    <section class="section" id="initiatives">
         <h2>Key Initiatives</h2>
-        <p><strong>Global Audit Support Programs</strong><br>
-        Coordinated infrastructure, application, and support teams to ensure system reliability and rapid issue resolution during regulatory audits.</p>
 
-        <p><strong>Service Delivery Transformation</strong><br>
-        Designed frontline support processes and escalation paths that improved operational consistency across global locations.</p>
+        <p><span class="highlight">Global Audit Support Programs</span><br>
+        Coordinated infrastructure, application, and support teams to maintain system reliability and rapid issue resolution during regulatory audits.</p>
 
-        <p><strong>Infrastructure Modernization</strong><br>
-        Led enterprise-level upgrade and migration efforts while minimizing operational disruption.</p>
-    </div>
+        <p><span class="highlight">Service Delivery Transformation</span><br>
+        Designed frontline support workflows and escalation paths improving consistency and accountability across global teams.</p>
 
-    <div class="section">
+        <p><span class="highlight">Infrastructure Modernization</span><br>
+        Led enterprise upgrade and migration initiatives while minimizing operational disruption and protecting business continuity.</p>
+    </section>
+
+    <section class="section" id="leadership">
         <h2>Leadership Approach</h2>
         <p>
-            My approach is simple: create clarity, align teams, and execute reliably. I focus on outcomes that improve stability, reduce operational risk, and enable teams to perform at their best.
+            My approach is simple: create clarity, align stakeholders, and execute reliably. I focus on building trust across teams and delivering outcomes that improve stability, reduce operational risk, and enable long-term success.
         </p>
-    </div>
+    </section>
 
-    <div class="section">
+    <section class="section" id="contact">
         <h2>Contact</h2>
         <p>
-            LinkedIn: (add your link)<br>
-            Email: (add your professional email)
+            Connect with me on LinkedIn.
         </p>
-    </div>
+        <a class="linkedin" href="https://www.linkedin.com/in/stevekoo/" target="_blank">
+            LinkedIn Profile
+        </a>
+    </section>
 
     <div class="footer">
         © 2026 Steve Koo
